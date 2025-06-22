@@ -6,7 +6,7 @@ FROM libretranslate/libretranslate:latest
 EXPOSE 5000
 
 # Create a start.sh script that launches LibreTranslate with the correct port
-RUN echo '#!/bin/sh\nexec libretranslate --host 0.0.0.0 --port $PORT' > /start.sh
+RUN printf '#!/bin/sh\nexec libretranslate --host 0.0.0.0 --port $PORT\n' > /start.sh
 RUN chmod +x /start.sh
 
 CMD ["/start.sh"]
