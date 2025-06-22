@@ -1,4 +1,4 @@
-name: libre-translate
+libre-translate
 services:
   libretranslate:
     tty: true
