@@ -11,6 +11,8 @@ RUN apt-get update -qq \
 
 RUN python -mvenv venv && ./venv/bin/pip install --no-cache-dir --upgrade pip
 
+LT_LOAD_ONLY
+
 COPY . .
 
 # Install package from source code, compile translations
